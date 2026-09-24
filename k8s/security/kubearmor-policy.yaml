@@ -1,0 +1,24 @@
+apiVersion: security.kubearmor.com/v1
+kind: KubeArmorPolicy
+metadata:
+  name: block-sensitive-access-wisecow
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: wisecow
+  process:
+    severity: 5
+    matchPaths:
+      - path: /bin/cat
+      - path: /usr/bin/wget
+    action: Block
+  file:
+    severity: 7
+    matchDirectories:
+      - dir: /etc/
+        recursive: true
+    matchPaths:
+      - path: /etc/shadow
+      - path: /etc/passwd
+    action: Block
