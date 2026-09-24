@@ -21,7 +21,7 @@ spec:
         fsGroup: 10001
       containers:
         - name: wisecow
-          image: <YOUR_DOCKERHUB_USERNAME>/wisecow:latest
+          image: wisecow:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 4499
