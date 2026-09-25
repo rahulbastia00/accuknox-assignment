@@ -21,8 +21,8 @@ spec:
         fsGroup: 10001
       containers:
         - name: wisecow
-          image: rahulbastia/wisecow:v1
-          imagePullPolicy: Always
+          image: wisecow:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 4499
               protocol: TCP

@@ -7,8 +7,7 @@ on:
     branches: [ "main", "master" ]
 
 env:
-  REGISTRY_USER: ${{ secrets.DOCKERHUB_USERNAME }}
-  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/wisecow:v1
+  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/wisecow
 
 jobs:
   build-and-push:

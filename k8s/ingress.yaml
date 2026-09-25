@@ -3,7 +3,6 @@ kind: Ingress
 metadata:
   name: wisecow-ingress
   annotations:
-    cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
     ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   ingressClassName: nginx
